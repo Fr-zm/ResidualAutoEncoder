@@ -2,7 +2,7 @@ import os
 import time
 import torch
 import torch.nn as nn
-from return_ssim import return_ssim
+from src.return_ssim import return_ssim
 
 def train_autoencoder(model, train_loader, test_loader, optimizer, scheduler, num_epochs,
                       criterion=nn.MSELoss(), DEVICE='cuda' if torch.cuda.is_available() else 'cpu'
